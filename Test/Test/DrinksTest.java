@@ -9,7 +9,7 @@ public class DrinksTest {
 
 	@Test
 	public void test() {
-		/creating an object
+		//creating an object
 		 DrinksTest test1=new DrinksTest();
 		 int drink=1;
 		 int expected =3;

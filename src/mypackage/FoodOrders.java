@@ -1,3 +1,4 @@
+package mypackage;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,7 +13,7 @@ public class FoodOrders {
 		CustomerDetails customer =new CustomerDetails();
 		food foodobject= new food();
 		Side_Dish Side_Dishobject= new Side_Dish();
-		Drinks Drinksobject= new Drinks();
+		Drink Drinksobject= new Drink();
 		//VAT Vatobject =new VAT();
 		//Revenue revenueobject = new Revenue();
 		

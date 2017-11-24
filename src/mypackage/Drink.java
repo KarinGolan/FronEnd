@@ -1,6 +1,7 @@
+package mypackage;
 
 
-public class Drinks {
+public class Drink {
      int water=3;
      int cola=5;
      int orangejuice=9;

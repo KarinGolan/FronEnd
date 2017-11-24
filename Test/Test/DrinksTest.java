@@ -13,7 +13,7 @@ public class DrinksTest {
 	public void test() {
 		//creating an object
 		Drink test1=new Drink();
-		 int drink=2;
+		 int drink=1;
 		 int expected =3;
 		
        

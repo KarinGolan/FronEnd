@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import mypackage.Side_Dish;
+
 
 
 public class Side_dish_Test {

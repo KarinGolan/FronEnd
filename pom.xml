@@ -15,27 +15,22 @@
   <build>
     <testSourceDirectory>Test</testSourceDirectory>
  	<sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
     <plugins>
       <plugin>
-         <artifactId>maven-assembly-plugin</artifactId>
-    <executions>
-      <execution>
-        <phase>mypackage</phase>
-        <goals>
-          <goal>single</goal>
-        </goals>
-      </execution>
-    </executions>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.6.1</version>
         <configuration>
-        <archive>
         <manifest>
-          <addClasspath>true</addClasspath>
-          <mainClass>mypackage.FoodOrders</mainClass>
-        </manifest>
-      </archive>
-      <descriptorRefs>
-        <descriptorRef>jar-with-dependencies</descriptorRef>
-      </descriptorRefs>
+        <mainClass>mypackage.FoodOrders</mainClass>
+    </manifest>
           <source>1.8</source>
           <target>1.8</target>
         </configuration>

@@ -1,4 +1,4 @@
-#
+
 # Cookbook Name:: s3_file
 # Recipe:: default
 #

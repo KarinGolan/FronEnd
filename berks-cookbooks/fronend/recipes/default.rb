@@ -1,5 +1,5 @@
 
-# Cookbook Name:: kk-
+# Cookbook Name:: FronEnd-
 # Recipe:: default
 #
 # Copyright (C) 2017 
@@ -11,8 +11,3 @@ command "aws s3 cp s3://frontendbucket/FronEnd.jar   /home/ec2-user/FronEnd.jar"
 end
 
 
-execute "running FronEnd.jar" do
-  command "java -jar /home/ec2-user/FronEnd.jar"
-  cwd "/home/ec2-user"
-  action "run"
-end

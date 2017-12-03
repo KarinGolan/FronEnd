@@ -25,14 +25,18 @@
     </resources>
     <plugins>
       <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.6.1</version>
-        <configuration>
-        <manifest>
-        <mainClass>mypackage.FoodOrders</mainClass>
-    </manifest>
-          <source>1.8</source>
-          <target>1.8</target>
+         <!-- Build an executable JAR -->
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <version>3.0.2</version>
+      <configuration>
+        <archive>
+          <manifest>
+            <addClasspath>true</addClasspath>
+            <classpathPrefix>lib/</classpathPrefix>
+            <mainClass>mypackage.FoodOrders</mainClass>
+          </manifest>
+        </archive>
         </configuration>
       </plugin>
     </plugins>

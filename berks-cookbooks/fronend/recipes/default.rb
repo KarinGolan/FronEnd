@@ -10,7 +10,7 @@ command "aws s3 cp s3://frontendbucket/FronEnd.jar   /home/ec2-user/FronEnd.jar"
  action "run"
 end
 
-execute "running /FronEnd" do
+execute "running FronEnd" do
   command "java -jar /home/ec2-user/FronEnd.jar"
   cwd "/home/ec2-user"
   action "run"

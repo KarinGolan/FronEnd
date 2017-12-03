@@ -1,6 +1,5 @@
 package mypackage;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
@@ -8,21 +7,7 @@ public class FoodOrders {
 
 	public static void main(String[] args ) throws IOException, InterruptedException {
 	
-		try {
-
-		      File file = new File("C:\\Users\\Karin Golan\\Desktop\\Final_project\\test.txt");
-
-		      if (file.createNewFile()){
-		        System.out.println("File is created!");
-		      }else{
-		        System.out.println("File already exists.");
-		      }
-
-	    	} catch (IOException e) {
-		      e.printStackTrace();
-		}
-		
-			Scanner input = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 		String var1;
 		int var2;
 		double total_cost = 0;

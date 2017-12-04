@@ -1,12 +1,17 @@
 package mypackage;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
 import java.util.Scanner;
 public class FoodOrders {
 
 	public static void main(String[] args ) throws IOException, InterruptedException {
-	
+		BufferedReader in;
+	    PrintWriter out;
 		Scanner input = new Scanner(System.in);
 		String var1;
 		int var2;
@@ -54,13 +59,28 @@ public class FoodOrders {
 				total_cost = total_cost + Drinksobject.MyDrinksOrder(var2);
 								
 			System.out.println("Hi, " + customer.mama() + " your order will arrive to " + customer.dada() + " whitin an hour, enjoy your meal");
-			
+
+		    Socket socket = new Socket("localhost",8080);
+	        in = new BufferedReader(
+	                new InputStreamReader(socket.getInputStream()));
+	        out = new PrintWriter(socket.getOutputStream(), true);
+	        out.println(total_cost);
+	        String response;
+            try {
+                response = in.readLine();
+                if (response == null || response.equals("")) {
+                      System.exit(0);
+                  }
+            } catch (IOException ex) {
+                   response = "Error: " + ex;
+            }
+            System.out.println("The total cost is : "+response);
 			
 			//total_cost=Vatobject.totalWithVat(total_cost);
 			
 			
 
-			 Process proc = Runtime.getRuntime().exec( "java -jar C:\\FinalProject\\BackEnd.jar "+total_cost);
+			/* Process proc = Runtime.getRuntime().exec( "java -jar C:\\FinalProject\\BackEnd.jar "+total_cost);
 			 proc.waitFor();
 			 InputStream in = proc.getInputStream();
 			 InputStream err = proc.getErrorStream();
@@ -69,7 +89,7 @@ public class FoodOrders {
 			    System.out.println(new String(b));
 			    byte c[]=new byte[err.available()];
 			    err.read(c,0,c.length);
-			    System.out.println(new String(c));
+			    System.out.println(new String(c));*/
 			  
 			
 			

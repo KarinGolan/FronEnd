@@ -60,7 +60,7 @@ public class FoodOrders {
 								
 			System.out.println("Hi, " + customer.mama() + " your order will arrive to " + customer.dada() + " whitin an hour, enjoy your meal");
 
-		    Socket socket = new Socket("my.backend.com",8080);
+		    Socket socket = new Socket("my.backend.com",8070);
 	        in = new BufferedReader(
 	                new InputStreamReader(socket.getInputStream()));
 	        out = new PrintWriter(socket.getOutputStream(), true);

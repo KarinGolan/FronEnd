@@ -60,7 +60,7 @@ public class FoodOrders {
 								
 			System.out.println("Hi, " + customer.mama() + " your order will arrive to " + customer.dada() + " whitin an hour, enjoy your meal");
 
-		    Socket socket = new Socket("localhost",8080);
+		    Socket socket = new Socket("internal-backend-ELB-1702404713.eu-west-1.elb.amazonaws.com",8080);
 	        in = new BufferedReader(
 	                new InputStreamReader(socket.getInputStream()));
 	        out = new PrintWriter(socket.getOutputStream(), true);

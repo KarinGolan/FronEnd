@@ -53,7 +53,7 @@
      <configuration>
     <includes>
      <includes>
-    <include>**/IT.java</include>
+    <include>**/IT*.java</include>
     </includes>
     </includes>
     </configuration>

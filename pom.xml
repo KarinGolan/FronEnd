@@ -52,7 +52,9 @@
      </goals>
      <configuration>
     <includes>
-    <include>**/*.class</include>
+     <includes>
+    <include>**/IT.java</include>
+    </includes>
     </includes>
     </configuration>
     </execution>

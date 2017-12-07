@@ -6,10 +6,18 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 public class FoodOrders {
 
 	public static void main(String[] args ) throws IOException, InterruptedException {
+		
 		BufferedReader in;
 	    PrintWriter out;
 		Scanner input = new Scanner(System.in);
@@ -20,14 +28,14 @@ public class FoodOrders {
 		food foodobject= new food();
 		Side_Dish Side_Dishobject= new Side_Dish();
 		Drink Drinksobject= new Drink();
-		//VAT Vatobject =new VAT();
-		//Revenue revenueobject = new Revenue();
+		 String wantToContinue = "yes";
+		
 		
 		System.out.println("Welcome to our online restaurant, to start with your order please enter your details");
 		
-		
 //asking for name 
 		        System.out.println("Enter your Full name ?");
+		       
 		        var1 =input.nextLine();
 		        customer.customername(var1);
 		 
@@ -60,7 +68,7 @@ public class FoodOrders {
 								
 			System.out.println("Hi, " + customer.mama() + " your order will arrive to " + customer.dada() + " whitin an hour, enjoy your meal");
 
-		    Socket socket = new Socket("localhost",8070);
+		    Socket socket = new Socket("internal-backend-ELB-1702404713.eu-west-1.elb.amazonaws.com",7070);
 	        in = new BufferedReader(
 	                new InputStreamReader(socket.getInputStream()));
 	        out = new PrintWriter(socket.getOutputStream(), true);
@@ -75,31 +83,10 @@ public class FoodOrders {
                    response = "Error: " + ex;
             }
             System.out.println("The total cost is : "+response);
-			
-			//total_cost=Vatobject.totalWithVat(total_cost);
-			
-			
 
-			/* Process proc = Runtime.getRuntime().exec( "java -jar C:\\FinalProject\\BackEnd.jar "+total_cost);
-			 proc.waitFor();
-			 InputStream in = proc.getInputStream();
-			 InputStream err = proc.getErrorStream();
-			   byte[] b=new byte[in.available()];
-			    in.read(b,0,b.length);
-			    System.out.println(new String(b));
-			    byte c[]=new byte[err.available()];
-			    err.read(c,0,c.length);
-			    System.out.println(new String(c));*/
-			  
-			
-			
-			
-			
-			//total_cost= maincourse+side+drink;
-				//total_cost=Vatobject.totalWithVat(total_cost);
-				//revenueobject.myRevenue(total_cost);
-				
-				
+
+		
+
 				
 			
 				}

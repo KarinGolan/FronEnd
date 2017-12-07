@@ -13,7 +13,7 @@
 </dependency>
   </dependencies>
   <build>
-    <testSourceDirectory>Test,IT</testSourceDirectory>
+    <testSourceDirectory>Test</testSourceDirectory>
  	<sourceDirectory>src</sourceDirectory>
   <plugins>
     <plugin>

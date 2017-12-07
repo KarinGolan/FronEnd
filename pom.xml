@@ -43,7 +43,7 @@
     </dependency>
     </dependencies>
     <configuration>
-    <groups>IT.InT.FoodorderIT.IntegrationTest</groups>
+    <groups>IT.InT.FoodorderIT</groups>
     </configuration>
     <executions>
      <execution>

@@ -6,7 +6,8 @@
 #
    
 execute "download file from  s3" do
-command "aws s3 cp s3://frontendbucket/FronEnd-0.0.1-SNAPSHOT.jar   /home/ec2-user/FronEnd-0.0.1-SNAPSHOT.jar"
+	
+command "aws s3 cp s3://#{node['fronend']['BucketName']}/FronEnd-0.0.1-SNAPSHOT.jar   /home/ec2-user/FronEnd-0.0.1-SNAPSHOT.jar"
  action "run"
 end
 

@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Scanner;
 public class FoodOrders {
 
-	public static void main(String[] args ) throws IOException, InterruptedException {
+	public static void main(String[]args) throws IOException, InterruptedException {
 		
 		BufferedReader in;
 	    PrintWriter out;
@@ -68,7 +68,13 @@ public class FoodOrders {
 								
 			System.out.println("Hi, " + customer.mama() + " your order will arrive to " + customer.dada() + " whitin an hour, enjoy your meal");
 
-		    Socket socket = new Socket("internal-backend-ELB-1702404713.eu-west-1.elb.amazonaws.com",6060);
+			//internal-backend-ELB-1702404713.eu-west-1.elb.amazonaws.com
+
+			int num ;
+			num = Integer.parseInt(args[1]);
+			
+			Socket socket = new Socket(args[0],num);
+		   
 	        in = new BufferedReader(
 	                new InputStreamReader(socket.getInputStream()));
 	        out = new PrintWriter(socket.getOutputStream(), true);

@@ -1,2 +1,3 @@
 # default bucket attributes
-default['fronend']['BucketName'] = ''
+default['fronend']['BucketName'] = 'bucketname'
+default['fronend']['Hostname'] = 'Hostname'

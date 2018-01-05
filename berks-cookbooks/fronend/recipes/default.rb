@@ -12,7 +12,7 @@ command "aws s3 cp s3://#{node['fronend']['BucketName']}/FronEnd-0.0.1-SNAPSHOT.
 end
 
 execute "running FronEnd" do
-  command "java -jar /home/ec2-user/FronEnd-0.0.1-SNAPSHOT.jar"
+  command "java -jar /home/ec2-user/FronEnd-0.0.1-SNAPSHOT.jar #{node['fronend']['Hostname']} 6060"
   cwd "/home/ec2-user"
   action "run"
 end
